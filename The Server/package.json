@@ -1,0 +1,28 @@
+{
+  "name": "sn-server",
+  "version": "1.0.0",
+  "description": "Server For SocialNetwork Website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "author": "Sandeep Halyal",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.6",
+    "cookie-parser": "^1.4.4",
+    "cookies": "^0.7.3",
+    "cors": "^2.8.5",
+    "decrypt": "0.0.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "formidable": "^1.2.1",
+    "json-web-token": "^3.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.9",
+    "multer": "^1.4.2",
+    "nodemon": "^1.19.1",
+    "npm": "^6.11.2"
+  }
+}

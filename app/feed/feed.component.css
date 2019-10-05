@@ -1,0 +1,10 @@
+nav{
+    position: fixed;
+    width: 100%;
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+
+.container{
+    padding-top: 58px
+}

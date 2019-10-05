@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-sm" style="background-color: rgb(216, 232, 247)">
+    <!--fixed-top -->
+    <b class="navbar-brand text-dark">SocialNetwork</b>
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+            <a routerLink="/feed" class="nav-link text-danger">Feed</a>
+        </li>
+        <li class="nav-item">
+            <a routerLink="/profile" class="nav-link text-warning">Profile</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link ">Messages</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-success" (click)="logout()">Logout</a>
+        </li>
+    </ul>
+</nav>
+
+<div class="container">
+    <div class="row">
+        <div class="offset-sm-2 col-sm-8">
+            <div *ngFor="let data of feedData">
+                <div class="card">
+                    <img class="card-img-top" src="{{data.url}}" alt="Card image">
+                    <div class="card-body">
+                        <b>{{data.name}}</b>
+                        {{data.date}}
+                        <button class="btn btn-info" style="float: right">Like</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="offset-sm-5 col-sm-2">
+            <button class="btn btn-info float-right" (click)="getfeed()">Refresh</button>
+        </div>
+    </div>
+    <br>
+</div>

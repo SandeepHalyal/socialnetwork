@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="jumbotron bg-success">Setup</h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="offset-sm-3 col-sm-6">
+            <form [formGroup]="setupData" (ngSubmit)="setupRequest()">
+                <div class="form-group">
+                    <label>Profile Picture</label>
+                    <input class="form-control" type="file" name="Photo" id="Photo" formControlName="photo">
+                </div>
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input class="form-control" type="text" name="fn" placeholder="Your Full Name" formControlName="fn">
+                </div>
+                <div class="form-group">
+                    <label>Birth Day</label>
+                    <input class="form-control" type="date" name="dob" placeholder="DOB" formControlName="dob">
+                </div>
+                <div class="form-group">
+                    <label>Place</label>
+                    <input class="form-control" type="text" name="place" placeholder="Your Place"
+                        formControlName="place">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success">Set</button>
+                </div>
+                <hr>
+            </form>
+
+        </div>
+    </div>
+</div>

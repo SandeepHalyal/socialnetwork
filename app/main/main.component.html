@@ -1,0 +1,68 @@
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1 class="jumbotron bg-warning">Welcome to the SocialNetwork</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="offset-sm-3 col-sm-6">
+            <form *ngIf="status" [formGroup]="loginData" (ngSubmit)="loginRequest()" >
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input class="form-control" type="text" name="Email" id="name" placeholder="Enter Email"
+                        formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" name="pass" class="form-control" placeholder="Password"
+                        formControlName="password">
+                </div>
+                <div class="form-group" *ngIf="!requestStatus">
+                    <p class="text-danger float-right">*Invalid Request</p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info" type="submit">Login</button>
+                </div>
+                <hr>
+            </form>
+
+            <form *ngIf="!status"  [formGroup]="signinData" (ngSubmit)="signinRequest()">
+                <div class="form-group">
+                    <label>Full Name</label>
+                    <input class="form-control" type="text" name="fn"  placeholder="Your Full Name" formControlName="fn">
+                </div>
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input class="form-control" type="text" name="Email" id="Email" placeholder="Enter Email"
+                        formControlName="email">
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" name="pass" class="form-control" placeholder="Password"
+                        formControlName="password">
+                </div>
+                <div class="form-group">
+                    <label>Profile Picture</label>
+                    <input class="form-control" type="file" name="Photo" id="Photo" (change)="onFileSelect($event)" formControlName="photo">
+                </div>
+                <div class="form-group">
+                    <label>Birth Day</label>
+                    <input class="form-control" type="date" name="dob" placeholder="DOB" formControlName="dob">
+                </div>
+                <div class="form-group">
+                    <label>Place</label>
+                    <input class="form-control" type="text" name="place" placeholder="Your Place"
+                        formControlName="place">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-info" type="submit">Signin</button>
+                </div>
+                <hr>
+            </form>
+            <button class="btn btn-warning form-control" (click)="checkstatus()">{{status? 'Signin':'Login'}}</button>
+            <br>
+        </div>
+    </div>
+</div>
